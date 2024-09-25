@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery Shop</title>
+    <link rel="icon" type="image/x-icon" href="image/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="bootstrap.min.css"></script>
+    <style>
+        .gallery {
+            background-color: #dbddf1;
+            padding: 80px 0;
+        }
+
+        image {
+            max-width: 100%;
+        }
+
+        .gallery img {
+            background-color: #fff;
+            padding: 15px;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .paragraph {
+            font-size: 16px;
+            font-family: sans-serif;
+            color: #000;
+            line-height: 22px;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .heading {
+            font-size: 42px;
+            font-family: var(--primary-font);
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .para {
+            line-height: inherit;
+            box-sizing: border-box;
+            margin: 0 0 2em;
+            display: block;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            unicode-bidi: isolate;
+            color: #5A5A5A;
+            font-family: "Roboto", Sans-serif;
+            font-weight: 500;
+        }
+
+        .title {
+            color: #02112E;
+            font-family: "NY1", Sans-serif;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+            box-sizing: border-box;
+            unicode-bidi: isolate;
+            display: block;
+
+        }
+
+        .description {
+            margin: 0;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.2;
+            color: #3E3E3E;
+            box-sizing: border-box;
+        }
+
+        .logo {
+            margin-bottom: 15px;
+        }
+
+        .title1 {
+            font-size: 36px;
+            line-height: 43px;
+            position: relative;
+            margin: 0;
+            font-family: var(--primary-font);
+            text-transform: uppercase;
+            color: #02112E;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+            text-align: center;
+        }
+
+        .logo1 {
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .heading1 {
+            color: #02112E;
+            font-family: "NY1", Sans-serif;
+            font-size: 45px;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+            box-sizing: border-box;
+            unicode-bidi: isolate;
+            display: block;
+            text-align: center;
+        }
+
+        .para1 {
+            text-align: center;
+            color: #3E3E3E;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 18px;
+        }
+
+        .img {
+            transition-duration: 0.3s;
+            height: auto;
+            max-width: 100%;
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            aspect-ratio: auto 1600 / 900;
+            box-sizing: border-box;
+            overflow-clip-margin: content-box;
+            overflow: clip;
+            text-align: center;
+        }
+
+        .head {
+            color: #02112E;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 1.75rem;
+            line-height: 1.2;
+            text-align: justify;
+            display: block;
+            margin-top: 10px;
+        }
+        .head1{
+            font-size: 48px;
+            font-weight: 700px;
+            line-height: 72px;
+            color: #2F2E2E;
+        }
+        .para2{
+            color: #2F2E2E;
+            font-size: 24px;
+            font-weight: 700px;
+            line-height: 32.68px;
+        }
+        .para3{
+            font-size: 18px;
+            font-weight: 400px;
+            color: #2F2E2E;
+            line-height: 21.6px;
+        }
+            
+    </style>
+
+
+
+    <!-- create a nav bar with following items -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" text-white href="#">
+                <img src="image/logo.png" style="width: 80px;height: auto;" /> Jewellery Shop
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav  mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex gap-5">
+                <i class="bi bi-person me-3 fs-4"></i>
+                <i class="bi bi-suit-heart me-3 fs-4"></i>
+                <i class="bi bi-bag fs-4"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- end nav bar section -->
+    <!-- start center section -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <h1 class="head1">Our Story</h1>
+                <h4 class="para2">"Embrace Freedom, Define Fashion."</h4>
+                <p>White Label transcends being a mere brand; it’s a transformative force reshaping India’s fashion narrative. Inspired by global influences, it fosters a space where creativity, trends,and culture converge harmoniously. Functioning as a community-driven platform, it extends a warm welcome to all who share a boundless love for fashion, free from discrimination. <br> From brands rich in imagination to a discerning audience, White Label stands as the bridge, propelling a vision of a sustainable, inclusive, and futuristic fashion future. Join us as we redefine the fashion landscape, celebrating freedom of expression with each inclusive step forward.
+                </p>
+            </div>
+            <div class="col-sm-6">
+                <img src="image/Glam World.jpg" height="350" width="500" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="logo1">
+                    <img src="image/diamond (1).png" alt="" height="40" width="40" class="logo1">
+                </div>
+                <h1 class="heading1">Where It All Began</h1>
+                <p class="para1">Founded in August, 2021, FEDE believes in constant innovation and improved quality
+                    through cutting edge technology. At every step, we run thorough checks to provide you with the best
+                    of 22 carat gold machine bangles and rings.With a close knit network of 200 retailers and
+                    distributors supplying for our every demand, we believe sky’s the limit for new opportunities and
+                    business growth. Our connections hold the same values as us, they believe in providing you quality
+                    alongside quantity. <br> We have pioneered as the first Indian company, to surpass every other
+                    industry leader, in the production of couple rings diversifying our portfolio into CZ studded CNC
+                    bangles, and rings. Doing so at a record-breaking rate in the country.Our family at TJPL is
+                    constantly growing and is currently 40 members strong. Here, we are constantly on the lookout to
+                    deliver the best quality at the best expense internally and externally.Making smart decisions is
+                    part of our trade here whether it comes to product or practise. This is why we truly believe when we
+                    say, there is no excellence without any labour.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="logo1">
+                    <img src="image/diamond (1).png" alt="" height="40" width="40" class="logo1">
+                </div>
+                <h1 class="heading1">Why FEDE</h1>
+                <p class="para1">FEDE acknowledges the enduring legacy of gold in our nation spanning millennia. This
+                    acknowledgment is reflected in the meticulous precision evident in each design and collection we
+                    offer. <br> Our commitment extends to providing you with nothing less than exceptional pieces in
+                    categories such as rings and bangles. Over the years, we have not only been leaders in this
+                    industry, but we have also honed our ability to grasp the dynamic demands of the market. <br>
+                    Through our dedication and inventive spirit, every purchase you make from us is infused with a
+                    distinctiveness that leaves a lasting impression.</p>
+            </div>
+        </div>
+    </div>
+    <div class="logo1">
+        <img src="image/diamond (1).png" alt="" height="40" width="40" class="logo1">
+    </div>
+    <div class="container mb-5">
+        <h1 class="title1">why choose us</h1>
+    </div>
+    <div class="container mb-5">
+        <div class="row">
+            <div class="col-sm-4 mb-5">
+                <img src="image/diamond.png" alt="" height="40" width="40" class="logo">
+                <h1 class="title">Basic Amenities</h1>
+                <p class="description">We have chosen best facilities for our hotel from reliable reputable brands.</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/price-tag.png" alt="" height="40" width="40" class="logo">
+                <h1 class="title">Special Offers</h1>
+                <p class="description">Have special offers to help clients save money and receive special benefits.</p>
+            </div>
+            <div class="col-sm-4">
+                <img src="image/mobile-payment.png" alt="" height="40" width="40" class="logo">
+                <h1 class="title">Online Payment</h1>
+                <p class="description">Stay at home and take an online payment without the use of checks or card.</p>
+            </div>
+            <div class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="col-sm-4 mb-5">
+                        <img src="image/location.png" alt="" height="40" width="40" class="logo">
+                        <h1 class="title">Best Location</h1>
+                        <p class="description">The location of president hotel is perfect and very central, so it's
+                            convinient for moving.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="image/employees.png" alt="" height="40" width="40" class="logo">
+                        <h1 class="title">Friendly Staff</h1>
+                        <p class="description">Our staff are helpful. They respond all questions of clients in a happy
+                            way.</p>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="image/diamond.png" alt="" height="40" width="40" class="logo">
+                        <h1 class="title">Online Payment</h1>
+                        <p class="description">Stay at home and take an online payment without the use of checks or
+                            card.</p>
+                    </div>
+
+                    <!-- end center section -->
+                    
+
+                   
+
+                    <!-- create a footer -->
+                    <footer class="p-5 bg-body-secondary"> 
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-3 text-black mb-1 border border-0 border-dark">
+                                    <img src="image/logo.png" alt="jewellery" height="auto" width="80px"> Jewellery Shop
+                                    <p>Jewelry refers to an adornment (generally precious metal or stone) worn by a person, like a bracelet, ring, necklace, or earrings. Jewelry may be purely decorative, or it may express something — like a ring that says you are married.</p>
+                                    <div class="container text-left">
+                                        <i class="bi bi-instagram"></i>
+                                    <i class="bi bi-facebook"></i>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 text-black border border-0 border-dark">
+                                    <h3 class="pb-4">My Account</h3>
+                                    <p>Home</p>
+                                    <p>About Us</p>
+                                    <p>Shop</p>
+                                    <p>Contact Us</p>
+                                </div>
+                                <div class="col-sm-3 text-black border border-0 border-dark">
+                                    <h3 class="pb-4">About Us</h3>
+                                    <p>Order Tracking</p>
+                                    <p>My Account</p>
+                                    <p>Checkout</p>
+                                    <p>Wishlist</p>
+                                </div>
+                                <div class="col-sm-3 text-black border border-0 border-dark">
+                                    <h3 class="pb-4">Newsletter</h3>
+                                    <form>
+                                        <div class="mb-3">
+                                          <label class="form-label">Name</label>
+                                          <input type="password" class="form-control" id="password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label">Email address</label>
+                                            <input type="email" class="form-control" id="username">
+                                          </div>
+                                        <button type="button" class="btn btn-dark" onclick="login()">Submit</button>
+                                      </form>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+
+
+                    <!-- end a footer -->
+
+                    </body>
+
+</html>
